@@ -29,6 +29,7 @@ function Register() {
     }
 
     if (isSuccess || user) {
+      toast.success("Registeration successful")
       navigate('/')
     }
 

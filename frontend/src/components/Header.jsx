@@ -2,6 +2,7 @@ import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa'
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { logout, reset } from '../features/auth/authSlice'
+import { toast } from 'react-toastify'
 
 function Header() {
   const navigate = useNavigate()
@@ -11,13 +12,15 @@ function Header() {
   const onLogout = () => {
     dispatch(logout())
     dispatch(reset())
+    toast.success("You are logged out")
     navigate('/')
   }
 
   return (
     <header className='header'>
       <div className='logo'>
-        <Link to='/'>GoalSetter</Link>
+        <br></br>
+        <Link to='/'><h2>🎯GoalSetter</h2></Link>
       </div>
       <ul>
         {user ? (
@@ -29,12 +32,12 @@ function Header() {
         ) : (
           <>
             <li>
-              <Link to='/login'>
+              <Link to='/login' className='btn'>
                 <FaSignInAlt /> Login
               </Link>
             </li>
             <li>
-              <Link to='/register'>
+              <Link to='/register' className='btn'>
                 <FaUser /> Register
               </Link>
             </li>

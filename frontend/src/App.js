@@ -20,6 +20,7 @@ function App() {
         </div>
       </Router>
       <ToastContainer />
+      <p className='footer'>Made by Atishay Jain</p>
     </>
   )
 }
