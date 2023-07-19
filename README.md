@@ -1,5 +1,5 @@
-# GoalSetter - Personal Goal Tracking App
-Welcome to GoalSetter! This is a MERN (MongoDB, Express, React, Node.js) web application designed to help users set, track, and achieve their personal goals. GoalSetter provides a user-friendly interface where individuals can register an account, log in securely, and manage their goals effectively. With features like goal creation, update, read, and deletion, GoalSetter empowers users to stay focused and organized on their journey towards success.
+# 🎯GoalSetter - Personal Goal Tracking App
+Welcome to GoalSetter! This is a MERN (MongoDB, Express, React, Node.js) web application designed to help users set, track, and achieve their personal goals. GoalSetter provides a user-friendly interface where individuals can register an account, log in securely, and manage their goals effectively. With features like goal creation, update, read, and deletion, GoalSetter empowers users to stay focused and organized on their journey toward success.
 
 # Table of Contents
 - Introduction
