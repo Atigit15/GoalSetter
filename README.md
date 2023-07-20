@@ -1,5 +1,5 @@
-# 🎯GoalSetter - Personal Goal Tracking App
-Welcome to GoalSetter! This is a MERN (MongoDB, Express, React, Node.js) web application designed to help users set, track, and achieve their personal goals. GoalSetter provides a user-friendly interface where individuals can register an account, log in securely, and manage their goals effectively. With features like goal creation, update, read, and deletion, GoalSetter empowers users to stay focused and organized on their journey toward success.
+# Strive, Thrive, Achieve: GoalSetter🎯 - Your Ambition Ally!
+Welcome to GoalSetter🎯! <br>This is a MERN (MongoDB, Express, React, Node.js) web application designed to help users set, track, and achieve their personal goals. GoalSetter provides a user-friendly interface where individuals can register an account, log in securely, and manage their goals effectively. With features like goal creation, update, read, and deletion, GoalSetter empowers users to stay focused and organized on their journey toward success.
 
 # Table of Contents
 - Introduction
@@ -10,16 +10,23 @@ Welcome to GoalSetter! This is a MERN (MongoDB, Express, React, Node.js) web app
 - License
   
 # Features
-- **User Authentication**
-GoalSetter offers a robust user authentication system that ensures secure access to the app. Users can register their accounts using a unique email address and password, and subsequently, log in with their credentials.
+- **User Authentication** - GoalSetter offers a robust user authentication system that ensures secure access to the app. 
+  - Register: Users can register their accounts using a unique email address and password.
+  - Login: Subsequently, log in with their credentials.
+  - Authentication is implemented with the help of JWT tokens. The user remains signed in until he closes the tab.
+  - Various checks on login and register forms are added to ensure robustness.
 
-- **Goal Management**
-Once logged in, users gain access to their personalized dashboard. From here, they can easily:
+- **Goal Management** - Once logged in, users gain access to their personalized dashboard. From here, they can easily<p>
+    - **Add Goals:** Create new goals by specifying goal detail.
+    - **Update Goals:** Modify existing goals..
+    - **Read Goals**: View a comprehensive list of all their goals.
+    - **Delete Goals:** Remove completed or obsolete goals from their list, keeping their dashboard clutter-free.
+      
+- **Priority** - Users can assign priority levels to their goals, allowing them to prioritize their efforts effectively.
+  
+- **Completion Time** - Users can associate a deadline with the goal
 
-- **Add Goals:** Create new goals by specifying goal detail.
-- **Update Goals:** Modify existing goals..
-- **Read Goals**: View a comprehensive list of all their goals.
-- **Delete Goals:** Remove completed or obsolete goals from their list, keeping their dashboard clutter-free.
+- **Ageing** - Users can set an aging attribute, it can be high, low, or no aging. This allows the goals that are indefinitely there in the dashboard to increase their priority and hence persuade the user to complete them.
 
 
 # Installation
@@ -46,15 +53,13 @@ To run GoalSetter locally, follow these steps:
 
 # Future Enhancements
 
-- Priority Setting: Assign priority levels to goals for better organization and focus.
 - Filtering Goals: Easily filter and sort goals based on priority and target dates.
 - Notifications: Receive reminders and notifications to stay on top of your goals.
 - Data Insights: Gain valuable insights and visualizations on your goal progress.
-- Collaboration: Collaborate with friends or colleagues on shared goals and projects.
   
 # License
 
-This project is licensed under the MIT License. Feel free to use, modify, and distribute this code as per the terms of the license.
+This project is licensed under the MIT License. Please feel free to use, modify, and distribute this code according to the terms of the license.
 
 ---
 We hope GoalSetter helps you stay focused and accomplish your aspirations.<br>
