@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Dashboard from './pages/Dashboard'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         </div>
       </Router>
       <ToastContainer />
-      <p className='footer'>Made by Atishay Jain</p>
+      <Footer></Footer>
     </>
   )
 }

@@ -4,13 +4,15 @@ import { updateGoal } from '../features/goals/goalSlice'
 
 function UpdateGoalForm(props) {
   const [text, setText] = useState(props.goal.text)
+  const [completeTime, setCompleteTime] = useState(props.goal.completeTime);
+  const [priority, setPriority] = useState(props.goal.priority);
 
   const dispatch = useDispatch()
 
   const onSubmit = (e) => {
     e.preventDefault()
 
-    dispatch(updateGoal({ goalId : (props.goal._id), goalData : {text}}));
+    dispatch(updateGoal({ goalId : (props.goal._id), goalData : {text}, completeTime : {completeTime}, priority : {priority}}));
     setText('')
 
     props.setTrigger(false);
@@ -30,6 +32,23 @@ function UpdateGoalForm(props) {
             id='text'
             value={text}
             onChange={(e) => setText(e.target.value)}
+          />
+          <label htmlFor='completeTime'>Complete Time</label>
+          <input
+            type= 'date'
+            name= 'completeTime'
+            id  = 'completeTime'
+            value={completeTime}
+            onChange={(e) => setCompleteTime(e.target.value)}
+          />
+
+          <label htmlFor='priority'>Priority</label>
+          <input
+            type= 'number'
+            name= 'priority'
+            id  = 'priority'
+            value={priority}
+            onChange={(e) => setPriority(e.target.value)}
           />
         </div>
         <div className='form-group'>

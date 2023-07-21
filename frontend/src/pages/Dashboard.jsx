@@ -6,6 +6,7 @@ import GoalItem from '../components/GoalItem'
 import Spinner from '../components/Spinner'
 import Popup from '../components/Popup'
 import { getGoals, reset } from '../features/goals/goalSlice'
+import { toast } from 'react-toastify'
 
 function Dashboard() {
   const navigate = useNavigate()
@@ -18,7 +19,8 @@ function Dashboard() {
 
   useEffect(() => {
     if (isError) {
-      console.log(message)
+      console.log(message);
+      // toast.error(message);
     }
 
     if (!user) {
@@ -35,6 +37,8 @@ function Dashboard() {
   if (isLoading) {
     return <Spinner />
   }
+
+
 
   return (
     <>

@@ -3,16 +3,19 @@ import axios from 'axios'
 const API_URL = '/api/goals/'
 
 // Create new goal
-const createGoal = async (goalData, token) => {
+const createGoal = async (goalData,completeTime,priority, token) => {
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,
     },
   }
 
-  // console.log(goalData);
+  // const dateString = completeTime.completeTime;
+  // const dateAndTime = new Date(dateString).toLocaleDateString();
 
-  const response = await axios.post(API_URL, goalData, config)
+  // console.log(dateAndTime);
+
+  const response = await axios.post(API_URL, {text : goalData, completeTime, priority}, config)
 
   return response.data
 }
@@ -46,18 +49,18 @@ const deleteGoal = async (goalId, token) => {
 }
 
 // Update user goal
-const updateGoal = async (goalId, goalData, token) => {
+const updateGoal = async (goalId, goalData,completeTime,priority, token) => {
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,
     },
   }
 
-  // console.log(goalData);
+  console.log(goalData);
   // console.log(goalId);
   // console.log(token);
 
-  const response = await axios.put(API_URL + goalId, goalData, config)
+  const response = await axios.put(API_URL + goalId, {text : goalData, completeTime, priority}, config)
 
   console.log(response);
 
