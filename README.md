@@ -31,6 +31,8 @@ But apart from being a complete CRUD app with user authentication, it also inclu
 - **Completion Time** - Users can associate a deadline with the goal
 
 - **Ageing** - Users can set an aging attribute, it can be high, low, or no aging. This allows the goals that are indefinitely there in the dashboard to increase their priority and hence persuade the user to complete them.
+  
+- **Sorting** - Sort the goal on a variety of its properties like priority, completion time, creatation time, days left, and age.
 
 
 # Installation
