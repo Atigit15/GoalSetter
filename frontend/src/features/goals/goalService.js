@@ -10,11 +10,6 @@ const createGoal = async (goalData,completeTime,priority, token) => {
     },
   }
 
-  // const dateString = completeTime.completeTime;
-  // const dateAndTime = new Date(dateString).toLocaleDateString();
-
-  // console.log(dateAndTime);
-
   const response = await axios.post(API_URL, {text : goalData, completeTime, priority}, config)
 
   return response.data
