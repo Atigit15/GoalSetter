@@ -1,13 +1,32 @@
 import React from 'react'
 
-function GoalDetails(props) {
-    const {text,completeTime,priority,createdAt} = props.goal;
-
+function getAge(createdAt) {
+    const msDiff2 = new Date().getTime() - new Date(createdAt).getTime();    //current date - created date
+    const age = Math.floor(msDiff2 / (1000 * 60 * 60 * 24)) ;
+    return age;
+  }
+  
+function getDaysLeft(completeTime){
     const msDiff1 = new Date(completeTime).getTime() - new Date().getTime();    //Future date - current date
     const daysLeft = Math.floor(msDiff1 / (1000 * 60 * 60 * 24)) + 1;
+    return daysLeft;
+}
 
-    const msDiff2 = new Date().getTime() - new Date(createdAt).getTime();    //current date - created date
-    const age = Math.floor(msDiff2 / (1000 * 60 * 60 * 24)) + 1;
+function getAgedPriority(completeTime, originalPriority){
+
+    // const currentDate = new Date();
+    // const deadline = new Date(completeTime);
+    const timeRemaining = getDaysLeft(completeTime);
+
+    const priorityIncreaseFactor = 1;
+  
+    const updatedPriority = (originalPriority * Math.exp(1 / (priorityIncreaseFactor * timeRemaining))).toFixed(2);
+  
+    return Math.max(updatedPriority, originalPriority);
+}
+
+function GoalDetails(props) {
+    const {text,completeTime,priority,createdAt} = props.goal;
 
     return (
         <div className='goalDetail'>
@@ -55,7 +74,7 @@ function GoalDetails(props) {
                     Days Left
                 </div>
                 <div className="content">
-                    {daysLeft}
+                    {getDaysLeft(completeTime)}
                 </div>
             </div>
 
@@ -64,7 +83,16 @@ function GoalDetails(props) {
                     Age
                 </div>
                 <div className="content">
-                    {age}
+                    {getAge(createdAt)}
+                </div>
+            </div>
+
+            <div className="agedPriority">
+                <div className="heading">
+                    Aged Priority
+                </div>
+                <div className="content">
+                    {(getDaysLeft(completeTime) > 0) ? getAgedPriority(completeTime,priority) : "You are past deadline, please update the completion time"}
                 </div>
             </div>
         </div>

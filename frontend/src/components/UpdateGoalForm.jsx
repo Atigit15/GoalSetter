@@ -18,7 +18,6 @@ function UpdateGoalForm(props) {
     props.setTrigger(false);
 
     window.location.reload(false);
-
   }
 
   return (

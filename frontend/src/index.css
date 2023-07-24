@@ -104,9 +104,30 @@ h3 {
   color: #219fb8;
 }
 
+.sort{
+  margin: 2rem;
+  .sortLabel{
+    font-weight: bold;
+    font-size: larger;
+  }
+  .dropdown{
+    background-color: #ffffff;
+    font-family: inherit;
+    font-size: medium;
+    /* margin: 20px; */
+    padding: 1rem;
+    margin-left: 1rem;
+    border-radius: 1rem;
+    border-width: 3px;
+    border-color: #219fb8;
+    color: #193136;
+  }
+}
+
 .goals {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 10px;
   /* display: flex;
   flex-direction: column;
@@ -119,15 +140,19 @@ h3 {
 .goal {
   background-color: #f4f4f4;
   border-radius: 2rem;
-  border: 3px  #219fb8;
+  border: 3px #219fb8;
   border-style: groove;
-  /* box-shadow: 5px 5px #dd6161; */
   margin: 10px 0;
   padding: 30px 0 20px ;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.redBorder{
+  border: 3px #dd6161;
+  border-style: groove;
 }
 
 .goal .date {
@@ -158,7 +183,8 @@ h3 {
   .complete,
   .priority,
   .daysLeft,
-  .age {
+  .age,
+  .agedPriority {
     display: flex;
     /* margin-bottom: 2px; */
     .heading{

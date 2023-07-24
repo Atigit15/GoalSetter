@@ -20,14 +20,15 @@ function Login() {
   const { user, isLoading, isError, isSuccess, message } = useSelector((state) => state.auth)
 
   useEffect(() => {
-    if (isError) {
-      toast.error(message)
-    }
-
     if (isSuccess || user) {
       toast.success("Login successful")
       navigate('/')
     }
+    
+    if (isError) {
+      toast.error(message)
+    }
+
 
     // dispatch(reset())
   }, [user, isError, isSuccess, message, navigate])
@@ -93,6 +94,9 @@ function Login() {
               Submit
             </button>
           </div>
+
+          <p className='form-priority'>Guest Email: guest@gmail.com </p>
+          <p className='form-priority'>Guest Password: guest123 </p>
         </form>
       </section>
     </>

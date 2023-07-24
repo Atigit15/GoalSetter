@@ -12,6 +12,7 @@ function Header() {
   const onLogout = () => {
     dispatch(logout())
     dispatch(reset())
+
     toast.success("You are logged out")
     navigate('/')
   }

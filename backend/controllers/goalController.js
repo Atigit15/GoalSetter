@@ -23,8 +23,22 @@ const setGoal = asyncHandler(async (req, res) => {
     throw new Error('Please add a text field')
   }
 
+  if(req.body.priority.priority <= 0){
+    res.status(400)
+    throw new Error("Please set a positive priority");
+  }
+
+  if(new Date(req.body.completeTime.completeTime) < (new Date())){
+    res.status(400)
+    throw new Error("Please set a completion date later than the current date");
+  }
+
+  // console.log(req.body);
+
   const goal = await Goal.create({
-    text: req.body.text,
+    completeTime: req.body.completeTime.completeTime,
+    priority: req.body.priority.priority,
+    text: req.body.text.text,
     user: req.user.id,
   })
 
@@ -54,7 +68,19 @@ const updateGoal = asyncHandler(async (req, res) => {
     throw new Error('User not authorized')
   }
 
-  const updatedGoal = await Goal.findByIdAndUpdate(req.params.id, req.body, {
+  if(req.body.priority.priority <= 0){
+    res.status(400)
+    throw new Error("Please set a positive priority");
+  }
+
+  if(new Date(req.body.completeTime.completeTime) < (new Date())){
+    res.status(400)
+    throw new Error("Please set a completion date later than the current date");
+  }
+
+  // console.log(req.body);
+
+  const updatedGoal = await Goal.findByIdAndUpdate(req.params.id, {text : req.body.text.text, completeTime : req.body.completeTime.completeTime, priority : req.body.priority.priority}, {
     new: true,
   })
 

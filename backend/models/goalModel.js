@@ -11,6 +11,14 @@ const goalSchema = mongoose.Schema(
       type: String,
       required: [true, 'Please add a text value'],
     },
+
+    completeTime : {
+      type: String,
+    },
+    priority : {
+      type: Number,
+      required : [true, 'Please select a priority'],
+    },
   },
   {
     timestamps: true,

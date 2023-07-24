@@ -50,7 +50,7 @@ function GoalForm(props) {
             value={priority}
             onChange={(e) => setPriority(e.target.value)}
           />
-          <p className='form-priority'>Higher the number lesser the priority</p>
+          <p className='form-priority'>Higher the number, greater the priority</p>
 
         </div>
         <div className='form-group'>
