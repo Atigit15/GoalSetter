@@ -1,11 +1,7 @@
 # Strive, Thrive, Achieve: GoalSetter🎯 - Your Ambition Ally!
 Welcome to GoalSetter🎯! <br><br>
 
-<img href="https://github.com/Atigit15/GoalSetter/blob/main/demo/poster.png" alt="app poster" align="center">
-
-This is a MERN (MongoDB, Express, React, Node.js) web application designed to help users set, track, and achieve their personal goals. GoalSetter provides a user-friendly interface where individuals can register an account, log in securely, and manage their goals effectively. With features like goal creation, update, read, and deletion, GoalSetter empowers users to stay focused and organized on their journey toward success.<br><br>
-
-But apart from being a complete CRUD app with user authentication, it also includes an exciting feature - aging! Sounds familiar? It will if you have studied process scheduling algorithms in OS. <br> Aging solves a critical problem of starvation in priority scheduling, and taking this inspiration, this application dynamically increases goal priorities over time, encouraging users to take action on long-standing goals and avoid procrastination. As goals age, their priorities are automatically boosted, ensuring that users maintain focus on both time-sensitive and older objectives.
+<p align="center"><img src="demo/poster.png" alt="app poster" height="400" width="700"></p>
 
 # Table of Contents
 - Introduction
@@ -28,14 +24,13 @@ But apart from being a complete CRUD app with user authentication, it also inclu
     - **Read Goals**: View a comprehensive list of all their goals.
     - **Delete Goals:** Remove completed or obsolete goals from their list, keeping their dashboard clutter-free.
       
-- **Priority** - Users can assign priority levels to their goals, allowing them to prioritize their efforts effectively.
+- **Priority**: Users can assign priority levels to their goals, allowing them to prioritize their efforts effectively.
   
-- **Completion Time** - Users can associate a deadline with the goal
+- **Completion Time**: Users can associate a deadline with the goal
 
-- **Ageing** - Users can set an aging attribute, it can be high, low, or no aging. This allows the goals that are indefinitely there in the dashboard to increase their priority and hence persuade the user to complete them.
-  
-- **Sorting** - Sort the goal on a variety of its properties like priority, completion time, creatation time, days left, and age.
+- - **Sorting**: Sort the goal on a variety of its properties like priority, completion time, creation time, days left, age, and aged priority.
 
+- **Priority Ageing**: Does aging sounds familiar? It will if you have studied process scheduling algorithms in OS. Aging solves a critical problem of starvation, in which ready-to-run processes are not able to acquire the CPU. To prevent this, their priority is increased periodically. Taking inspiration from this, in this app priority of the goals, will keep increasing as the deadline comes closer. This prevents procrastination and allows the users to focus on the most important tasks. 
 
 # Installation
 To run GoalSetter locally, follow these steps:
@@ -52,6 +47,7 @@ To run GoalSetter locally, follow these steps:
    - MONGO_URL: (MongoDB connection URL)
    - JWT_SECRET: (a string used for encrypting tokens)
 - Run the app: `npm run dev`
+  
 # Usage
 - Register an account using your name, unique email address, and password.
 - Log in to access your personalized dashboard.
