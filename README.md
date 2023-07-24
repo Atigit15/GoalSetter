@@ -1,6 +1,8 @@
 # Strive, Thrive, Achieve: GoalSetter🎯 - Your Ambition Ally!
 Welcome to GoalSetter🎯! <br><br>
 
+<img href="https://github.com/Atigit15/GoalSetter/blob/main/demo/poster.png" alt="app poster" align="center">
+
 This is a MERN (MongoDB, Express, React, Node.js) web application designed to help users set, track, and achieve their personal goals. GoalSetter provides a user-friendly interface where individuals can register an account, log in securely, and manage their goals effectively. With features like goal creation, update, read, and deletion, GoalSetter empowers users to stay focused and organized on their journey toward success.<br><br>
 
 But apart from being a complete CRUD app with user authentication, it also includes an exciting feature - aging! Sounds familiar? It will if you have studied process scheduling algorithms in OS. <br> Aging solves a critical problem of starvation in priority scheduling, and taking this inspiration, this application dynamically increases goal priorities over time, encouraging users to take action on long-standing goals and avoid procrastination. As goals age, their priorities are automatically boosted, ensuring that users maintain focus on both time-sensitive and older objectives.
