@@ -28,9 +28,11 @@ Welcome to GoalSetter🎯! <br><br>
   
 - **Completion Time**: Users can associate a deadline with the goal
 
-- - **Sorting**: Sort the goal on a variety of its properties like priority, completion time, creation time, days left, age, and aged priority.
+- **Sorting**: Sort the goal on a variety of its properties like priority, completion time, creation time, days left, age, and aged priority.
 
-- **Priority Ageing**: Does aging sounds familiar? It will if you have studied process scheduling algorithms in OS. Aging solves a critical problem of starvation, in which ready-to-run processes are not able to acquire the CPU. To prevent this, their priority is increased periodically. Taking inspiration from this, in this app priority of the goals, will keep increasing as the deadline comes closer. This prevents procrastination and allows the users to focus on the most important tasks. 
+- **Priority Ageing**: Does aging sounds familiar? It will if you have studied process scheduling algorithms in OS. Aging solves a critical problem of starvation, in which ready-to-run processes are not able to acquire the CPU. To prevent this, their priority is increased periodically. Taking inspiration from this, in this app priority of the goals, will keep increasing as the deadline comes closer. This prevents procrastination and allows the users to focus on the most important tasks.
+  
+- **Form Validation**: Made validation checks to the login and register forms, which now display error messages through the Toastify API. I also implemented validation checks for the forms used to add and update goals, which prevent users from setting a completion time earlier than the current date or a negative priority. These changes have improved data consistency.
 
 # Installation
 To run GoalSetter locally, follow these steps:
