@@ -1,4 +1,4 @@
-# Strive, Thrive, Achieve: GoalSetter🎯 - Your Ambition Ally!
+# GoalSetter🎯 - Your Ambition Ally!
 Welcome to GoalSetter🎯! <br><br>
 
 <p align="center"><img src="demo/poster.png" alt="app poster" height="400" width="700"></p>
