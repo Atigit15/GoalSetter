@@ -4,12 +4,21 @@ Welcome to GoalSetter🎯! <br><br>
 <p align="center"><img src="demo/poster.png" alt="app poster" height="400" width="700"></p>
 
 # Table of Contents📄
-- Introduction
+- Demo
 - Features
 - Installation
 - Usage
 - Future Enhancements
 - License
+
+# Demo💻
+
+
+
+https://github.com/Atigit15/GoalSetter/assets/77894729/10646b9c-527e-418f-ab41-f722aaa0fae2
+
+
+
   
 # Features💫
 - **User Authentication** - GoalSetter offers a robust user authentication system that ensures secure access to the app. 
